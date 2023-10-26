@@ -5,9 +5,8 @@
  * This program makes neopixels change color depending on the distance
 */
 
-// variables 
+// variables
 let distanceToObject: number = 0
-let lightvalue: number = 0
 let neopixelStrip: neopixel.Strip = null
 
 // setup
@@ -20,7 +19,6 @@ neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
-
 
 input.onButtonPressed(Button.A, function () {
   distanceToObject = sonar.ping(
@@ -35,7 +33,7 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.show()
 
-  } else {
+} else {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Green))
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
